@@ -1,16 +1,11 @@
-const initState = { count: 0 }
+const initState = []
 
 const Reducer = (state = initState, action) => {
-
+    console.log(state)
     switch (action.type) {
-        case 'INCREMENT':
-            return { count: state.count + 1 }
-        case 'DECREMENT':
-            if (state.count > 0) {
-                return { count: state.count - 1 }
-            }
-        case 'RESET':
-            return { count: 0 }
+        case 'ADD_USER':
+            return [...state, action.payload]
+
         default: return state
     }
 }

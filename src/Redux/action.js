@@ -1,15 +1,7 @@
-export const increment = () => {
-    return { type: 'INCREMENT' }
-}
-
-export const decrement = () => {
+export const AddUser = (x) => {
+    console.log(x)
     return {
-        type: 'DECREMENT'
-    }
-}
-
-export const reset = () => {
-    return {
-        type: 'RESET'
+        type: 'ADD_USER',
+        payload: x
     }
 }
